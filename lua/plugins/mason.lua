@@ -31,8 +31,9 @@ return {
     opts = function(_, opts)
       -- add more things to the ensure_installed table protecting against community packs modifying it
       opts.ensure_installed = require("astrocore").list_insert_unique(opts.ensure_installed, {
+        "black",
         "cspell",
-        "luaformatter",
+        "isort",
         "markdownlint",
         "ruff",
         "stylua",
