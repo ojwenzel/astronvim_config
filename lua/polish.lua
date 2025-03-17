@@ -25,3 +25,7 @@ vim.api.nvim_create_autocmd("FileType", {
     vim.opt_local.linebreak = true
   end,
 })
+
+-- Key mappings for CopilotChat
+vim.api.nvim_set_keymap("n", "<leader>ao", ":CopilotChatOpen<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<leader>ac", ":CopilotChatClose<CR>", { noremap = true, silent = true })
