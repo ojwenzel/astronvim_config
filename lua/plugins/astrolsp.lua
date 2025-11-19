@@ -42,7 +42,14 @@ return {
     servers = {
       "pyright",
       "ruff",
-      "mypy"
+      "mypy",
+    },
+    -- Java LSP setup with nvim-java
+    setup_handlers = {
+      jdtls = function(_, opts)
+        require("java").setup()
+        require("lspconfig").jdtls.setup(opts)
+      end,
     },
     -- customize language server configuration options passed to `lspconfig`
     ---@diagnostic disable: missing-fields
