@@ -15,6 +15,13 @@ return {
     config = function() require("lsp_signature").setup() end,
   },
 
+  {
+    "kevinhwang91/nvim-ufo",
+    opts = {
+      provider_selector = function(bufnr, filetype, buftype) return { "treesitter", "indent" } end,
+    },
+  },
+
   -- == Examples of Overriding Plugins ==
 
   -- customize alpha options
