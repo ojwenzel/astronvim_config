@@ -1,4 +1,4 @@
--- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+if true then return {} end -- disabled: no sources configured, causes nvim 0.12 compat error
 
 -- Customize None-ls sources
 
