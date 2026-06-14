@@ -39,9 +39,8 @@ return {
       -- end
     },
     -- enable servers that you already have installed without mason
+    -- (basedpyright + ruff are now managed by their astrocommunity packs)
     servers = {
-      "pyright",
-      "ruff",
       "mypy",
     },
     -- Java LSP setup with nvim-java

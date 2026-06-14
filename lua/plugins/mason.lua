@@ -10,23 +10,16 @@ return {
     opts = {
       -- Make sure to use the names found in `:Mason`
       ensure_installed = {
-        -- language servers
-        "bash-language-server",
-        "dockerfile-language-server",
+        -- language servers (packs handle most; these are extras)
         "docker-compose-language-service",
-        "lua-language-server",
-        "pyright",
-        "ruff",
         "taplo",
 
-        -- formatters / linters
-        "black",
-        "cspell",
-        "isort",
-        "markdownlint",
-        "shellcheck",
-        "stylua",
+        -- formatters/linters managed by Mason (non-Nix tooling)
+        -- Note: shfmt, shellcheck, hadolint, clangd, clang-format, prettier,
+        -- markdownlint, nixd, statix, deadnix are system-installed via Nix
+        "stylua",    -- lua formatter
         "yamllint",
+        "cspell",
 
         -- debuggers
         "debugpy",

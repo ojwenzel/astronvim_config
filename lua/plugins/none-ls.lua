@@ -1,22 +1,6 @@
-if true then return {} end -- disabled: no sources configured, causes nvim 0.12 compat error
-
--- Customize None-ls sources
-
+-- none-ls.nvim disabled: incompatible with Neovim 0.12 (lsp.protocol._request_name_to_capability removed)
 ---@type LazySpec
 return {
   "nvimtools/none-ls.nvim",
-  opts = function(_, config)
-    -- config variable is the default configuration table for the setup function call
-    -- local null_ls = require "null-ls"
-
-    -- Check supported formatters and linters
-    -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/formatting
-    -- https://github.com/nvimtools/none-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
-    config.sources = {
-      -- Set a formatter
-      -- null_ls.builtins.formatting.stylua,
-      -- null_ls.builtins.formatting.prettier,
-    }
-    return config -- return final config table
-  end,
+  enabled = false,
 }

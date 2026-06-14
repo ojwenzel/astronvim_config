@@ -9,5 +9,16 @@ return {
   "AstroNvim/astrocommunity",
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
-  -- import/override with your plugins folder
+  -- formatting + linting (replaces none-ls)
+  { import = "astrocommunity.editing-support.conform-nvim" },
+  { import = "astrocommunity.lsp.nvim-lint" },
+  -- language packs
+  { import = "astrocommunity.pack.python.base" },
+  { import = "astrocommunity.pack.python.basedpyright" },
+  { import = "astrocommunity.pack.python.ruff" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.docker" },
+  { import = "astrocommunity.pack.nix" },
+  { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.markdown" },
 }
