@@ -2,8 +2,8 @@ return {
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
-      { "github/copilot.vim" }, -- or zbirenbaum/copilot.lua
-      { "nvim-lua/plenary.nvim", branch = "master" }, -- for curl, log and async functions
+      { "zbirenbaum/copilot.lua" }, -- managed by blink-copilot community pack
+      { "nvim-lua/plenary.nvim", branch = "master" },
     },
     build = "make tiktoken", -- Only on MacOS or Linux
     opts = {
