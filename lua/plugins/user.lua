@@ -13,8 +13,10 @@ return {
   {
     "stevearc/aerial.nvim",
     opts = function(_, opts)
-      -- treesitter backend crashes on markdown (nil node bug); use LSP only
-      opts.backends = { ["_"] = { "treesitter", "lsp" }, markdown = { "lsp" } }
+      -- treesitter backend crashes on markdown (nil node bug); disable aerial there
+      opts.ignore = opts.ignore or {}
+      opts.ignore.filetypes = opts.ignore.filetypes or {}
+      table.insert(opts.ignore.filetypes, "markdown")
       return opts
     end,
   },
