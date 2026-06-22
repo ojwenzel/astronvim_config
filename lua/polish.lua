@@ -18,11 +18,14 @@ vim.filetype.add {
 }
 
 -- Enable line wrapping for Markdown files
+-- Also block aerial's treesitter backend on markdown (it has a nil-node crash).
+-- Setting vim.b.aerial_backends = {} before aerial attaches prevents all backends.
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "markdown",
-  callback = function()
+  callback = function(args)
     vim.opt_local.wrap = true
     vim.opt_local.linebreak = true
+    vim.b[args.buf].aerial_backends = {}
   end,
 })
 
