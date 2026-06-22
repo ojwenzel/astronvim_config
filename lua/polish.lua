@@ -29,6 +29,11 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+-- Kill the markdown-preview.nvim Node server on exit so it doesn't block port 8090
+vim.api.nvim_create_autocmd("VimLeavePre", {
+  callback = function() vim.fn.system "fuser -k 8090/tcp 2>/dev/null" end,
+})
+
 -- Key mappings for CopilotChat
 vim.api.nvim_set_keymap("n", "<leader>ao", ":CopilotChatOpen<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "<leader>ac", ":CopilotChatClose<CR>", { noremap = true, silent = true })
