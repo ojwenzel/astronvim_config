@@ -21,4 +21,5 @@ return {
   { import = "astrocommunity.pack.nix" },
   { import = "astrocommunity.pack.cpp" },
   { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
 }
