@@ -12,10 +12,11 @@ return {
 
   {
     "stevearc/aerial.nvim",
-    opts = {
+    opts = function(_, opts)
       -- treesitter backend crashes on markdown (nil node bug); use LSP only
-      backends = { markdown = { "lsp" }, _ = { "treesitter", "lsp" } },
-    },
+      opts.backends = { ["_"] = { "treesitter", "lsp" }, markdown = { "lsp" } }
+      return opts
+    end,
   },
 
   {
