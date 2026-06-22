@@ -11,6 +11,14 @@ return {
   { "max397574/better-escape.nvim", enabled = false },
 
   {
+    "stevearc/aerial.nvim",
+    opts = {
+      -- treesitter backend crashes on markdown (nil node bug); use LSP only
+      backends = { markdown = { "lsp" }, _ = { "treesitter", "lsp" } },
+    },
+  },
+
+  {
     "iamcco/markdown-preview.nvim",
     init = function()
       vim.g.mkdp_open_to_the_world = 1 -- listen on 0.0.0.0 so SSH port-forward works
