@@ -24,7 +24,7 @@ return {
   {
     "iamcco/markdown-preview.nvim",
     init = function()
-      vim.g.mkdp_open_to_the_world = 1 -- listen on 0.0.0.0 so SSH port-forward works
+      vim.g.mkdp_open_to_the_world = 0 -- bind to 127.0.0.1; use ssh -L 8090:localhost:8090
       vim.g.mkdp_browser = ""          -- don't try to open a local browser
       vim.g.mkdp_port = "8090"
       vim.g.mkdp_echo_preview_url = 1  -- print the URL in the cmdline on :MarkdownPreview
